@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="es" data-static-lang="es"><head><meta charset="utf-8"><base href="/"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Herramientas: calculadora 1RM y zonas de carrera | Hybride Coaching</title><meta name="description" content="Herramientas gratuitas: calcula tu repetición máxima (1RM) y tus zonas de entrenamiento de carrera."><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="https://sportifhybride.com/es/outils"><link rel="alternate" hreflang="fr" href="https://sportifhybride.com/outils"><link rel="alternate" hreflang="en" href="https://sportifhybride.com/en/outils"><link rel="alternate" hreflang="es" href="https://sportifhybride.com/es/outils"><link rel="alternate" hreflang="x-default" href="https://sportifhybride.com/outils"><meta property="og:type" content="website"><meta property="og:site_name" content="Hybride Coaching - Sportif Hybride"><meta property="og:locale" content="es_ES"><meta property="og:locale:alternate" content="fr_FR"><meta property="og:locale:alternate" content="en_US"><meta property="og:title" content="Herramientas: calculadora 1RM y zonas de carrera | Hybride Coaching"><meta property="og:description" content="Herramientas gratuitas: calcula tu repetición máxima (1RM) y tus zonas de entrenamiento de carrera."><meta property="og:url" content="https://sportifhybride.com/es/outils"><meta property="og:image" content="https://sportifhybride.com/assets/hero.webp"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Herramientas: calculadora 1RM y zonas de carrera | Hybride Coaching"><meta name="twitter:description" content="Herramientas gratuitas: calcula tu repetición máxima (1RM) y tus zonas de entrenamiento de carrera."><meta name="twitter:image" content="https://sportifhybride.com/assets/hero.webp"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://sportifhybride.com/es/"},{"@type":"ListItem","position":2,"name":"Herramientas: calculadora 1RM y zonas de carrera","item":"https://sportifhybride.com/es/outils"}]}</script><link rel="stylesheet" href="style.css">
+
+
+
+
+
+
+
+
+
+
+
+</head><body><header class="top"><nav class="nav wrap"><a class="brand" href="/es/"><img src="assets/logo.webp" alt="Logotipo de Hybride Coaching"><span>HYBRIDE COACHING<small>por Victor Castillo</small></span></a><div class="links"><a href="/es/programmes">Programas</a><a class="two" href="/es/coaching">Coaching personalizado</a><a href="/es/avis">Opiniones y resultados</a><a href="/es/parcours">Sobre mí</a><a href="/es/creation-site">Creación de sitios web</a><a href="/es/outils">Herramientas</a><a href="/es/faq">Preguntas frecuentes</a><a href="/es/contact">Contacto</a></div><span class="lang"></span><button class="menu" aria-label="Abrir el menú">☰</button></nav></header>
+<main class="wrap legal-page" style="max-width:1000px">
+<div class="eyebrow">HERRAMIENTAS GRATUITAS</div><h1 style="font-size:clamp(38px,6vw,64px)">CALCULADORAS</h1>
+<p class="muted" style="max-width:680px">Todos los resultados son estimaciones. No sustituyen ni una evaluación individual ni una prueba fisiológica supervisada.</p>
+
+<div class="tools" style="margin-top:30px">
+  <div class="tool">
+    <h3>Carga de trabajo — de 1 a 20 repeticiones</h3>
+    <p class="hint muted" style="font-size:13.5px;margin:0 0 10px">Introduce una carga y el número de repeticiones realizadas. La tabla estima tu 1RM y después la carga de trabajo para cada número de repeticiones, con el rango de porcentaje aconsejado.</p>
+    <label for="rmWeight">Carga levantada (kg)</label><input id="rmWeight" type="number" min="1" step="0.5">
+    <label for="rmReps">Repeticiones realizadas (1 a 20)</label><input id="rmReps" type="number" min="1" max="20">
+    <div class="buttons"><button class="btn" id="rmBtn" type="button">CALCULAR</button></div>
+    <div class="result" id="rmOut"></div>
+    <div id="rmTable"></div>
+  </div>
+
+  <div class="tool">
+    <h3>Zonas de entrenamiento a partir de tus marcas</h3>
+    <p class="hint muted" style="font-size:13.5px;margin:0 0 10px">Añade una o varias marcas recientes, con la distancia y el periodo. Cuantas más des, más fiable será la estimación.</p>
+    <div class="perfrow">
+      <select id="perfDist">
+        <option value="1">1 km</option><option value="1.5">1500 m</option><option value="3" selected="">3000 m</option>
+        <option value="5">5 km</option><option value="10">10 km</option><option value="21.1">Media maratón</option><option value="42.195">Maratón</option>
+      </select>
+      <input id="perfTime" placeholder="hh:mm:ss o mm:ss">
+      <select id="perfWhen">
+        <option value="0">Menos de 3 semanas</option>
+        <option value="1">De 1 a 3 meses</option>
+        <option value="2">Más de 3 meses</option>
+      </select>
+      <button class="btn" id="addPerf" type="button">AÑADIR</button>
+    </div>
+    <div id="perfList" class="perflist"></div>
+    <div class="buttons"><button class="btn" id="zBtn" type="button">CALCULAR MIS ZONAS</button></div>
+    <div class="result" id="zOut" style="font-size:15px;line-height:1.8;font-weight:600"></div>
+  </div>
+</div>
+
+<div class="orders">
+  <div class="head"><h3>Mis récords personales</h3><p class="muted" style="font-size:13.5px;margin:6px 0 0">Se guardan únicamente en este dispositivo, en tu navegador. No se envía ni se publica nada.</p></div>
+  <div style="padding:20px 22px;display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end">
+    <div><label for="prDist" class="muted" style="display:block;font-size:13px;margin-bottom:5px">Distancia o prueba</label><input id="prDist" placeholder="5 km, 100 m, sentadilla..."></div>
+    <div><label for="prTime" class="muted" style="display:block;font-size:13px;margin-bottom:5px">Rendimiento</label><input id="prTime" placeholder="22:14 o 120 kg"></div>
+    <button class="btn" id="prAdd" type="button">GUARDAR</button>
+  </div>
+  <table><thead><tr><th>Prueba</th><th>Rendimiento</th><th>Fecha</th><th></th></tr></thead><tbody id="prBody"></tbody></table>
+</div>
+
+<section class="partner">
+  <div class="eyebrow">SOCIO</div>
+  <h2>Qwik VBT</h2>
+  <p>Una aplicación que mide la velocidad y la trayectoria de tu barra durante tus series de musculación, directamente desde tu móvil. Útil para seguir tus cargas y tu progresión.</p>
+  <div class="buttons">
+    <a class="btn" target="_blank" rel="noopener" href="https://apps.apple.com/us/app/qwik-vbt/id1660094818">DESCARGAR EN LA APP STORE</a>
+    <a class="btn alt" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.zopfi.qwik_vbt">DESCARGAR EN GOOGLE PLAY</a>
+  </div>
+  <p class="notice">Colaboración: trabajo con Qwik VBT y puedo percibir una comisión por las suscripciones.</p>
+</section>
+<section class="nlbox"><div class="eyebrow">CANAL DE WHATSAPP · GRATIS</div><h2>Newsletter semanal</h2><p>Cada semana te envío por WhatsApp consejos para aplicar sobre deporte, bienestar y salud.</p><button type="button" class="btn" data-nl="">UNIRME A LA NEWSLETTER</button><p class="notice">Gratis. Recibes los mensajes en WhatsApp, sin correo.</p></section>
+</main><footer class="footer"><div class="wrap footer-row"><div><b>HYBRIDE COACHING</b><br>© 2026 Victor Castillo</div><div class="legal"><a href="mentions-legales.html">Aviso legal</a><a href="cgv.html">CGV</a><a href="confidentialite.html">Privacidad</a><a href="cookies.html">Cookies</a><a href="/es/creation-site">Creación de sitios web</a></div><div class="fsoc"><span class="fsoc-t">MIS REDES SOCIALES</span><div class="socials"><a href="https://www.instagram.com/sportifhybride" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@sportifhybride" target="_blank" rel="noopener">TikTok</a><a href="https://www.youtube.com/@victor800m" target="_blank" rel="noopener">YouTube</a><a href="https://fr.linkedin.com/in/victor-castillo-a945b0148" target="_blank" rel="noopener">LinkedIn</a><a href="https://strava.app.link/5R9wd7EG37b" target="_blank" rel="noopener">Strava</a></div><button type="button" class="nl-mini" data-nl="">Newsletter semanal · WhatsApp</button></div></div></footer><div class="cookie"><b>Respetamos tu privacidad</b><div>Este sitio solo utiliza por ahora las cookies necesarias.</div><div class="cookie-actions"><button class="ok" data-cookie="necessary">Aceptar</button><button data-cookie="refused">Rechazar</button></div></div><script src="script.js"></script><script src="i18n.js"></script></body></html>
